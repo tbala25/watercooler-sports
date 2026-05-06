@@ -1,0 +1,35 @@
+name: Daily MLS Scrape
+
+on:
+  schedule:
+    - cron: '0 11 * * *'  # 11am UTC = 6am ET
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run ETL pipeline
+        run: python etl/run_all.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/daily/
+          git diff --staged --quiet || git commit -m "chore: daily data update $(date -u +%Y-%m-%d)"
+          git push

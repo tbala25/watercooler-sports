@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Playfair+Display:wght@700&family=IBM+Plex+Sans+Condensed:wght@400;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0 }
+
+:root {
+  --ink:        #0f0f0f;
+  --ink2:       #3a3a3a;
+  --ink3:       #6b6b6b;
+  --ink4:       #999;
+  --paper:      #f7f5f0;
+  --paper2:     #eeece7;
+  --paper3:     #e4e1da;
+  --rule:       #c8c5be;
+  --red:        #C8102E;
+  --red-light:  #fde8ec;
+  --green:      #2a7a3b;
+  --amber:      #b87800;
+  --blue:       #1a4f8a;
+  --blue-panel: #f0f4f9;
+  --blue-rule:  #c8d8eb;
+  --mono:       'IBM Plex Mono', monospace;
+  --sans:       'IBM Plex Sans Condensed', sans-serif;
+  --serif:      'Playfair Display', serif;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* ── Skip link ─────────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 4px 8px;
+  font-family: var(--mono);
+  font-size: 10px;
+  z-index: 100;
+  text-decoration: none;
+}
+.skip-link:focus { top: 0 }
+
+/* ── Wrap ──────────────────────────────────────────────────── */
+.wrap { max-width: 920px; margin: 0 auto; padding: 12px 16px }
+
+/* ── Masthead ──────────────────────────────────────────────── */
+.masthead { border-bottom: 3px double var(--ink); padding: 10px 0 8px }
+.mast-inner { display: flex; align-items: baseline; justify-content: space-between }
+.site-name { font-family: var(--serif); font-size: 30px; font-weight: 700; color: var(--ink) }
+.mast-date { font-family: var(--mono); font-size: 10px; color: var(--ink3); display: block; margin-bottom: 4px; text-align: right }
+.dots { display: flex; gap: 10px; justify-content: flex-end }
+.dot { font-family: var(--mono); font-size: 9px; display: flex; align-items: center; gap: 3px }
+.dot::before { content: ''; width: 6px; height: 6px; border-radius: 50%; display: inline-block }
+.dot.ok::before { background: var(--green) }
+.dot.err::before { background: var(--red) }
+
+/* ── Section labels ────────────────────────────────────────── */
+.sec-label {
+  font-family: var(--mono); font-size: 9px; letter-spacing: .12em;
+  color: var(--ink4); text-transform: uppercase;
+  border-bottom: 1px solid var(--rule); padding-bottom: 3px; margin-bottom: 6px;
+}
+.sec-label-nl {
+  font-family: var(--mono); font-size: 9px; letter-spacing: .12em;
+  color: var(--blue); text-transform: uppercase;
+  border-bottom: 1px solid var(--blue-rule); padding-bottom: 3px; margin-bottom: 6px;
+}
+.note { font-family: var(--mono); font-size: 8px; color: var(--ink4); margin-top: 3px }
+
+/* ── Data unavailable placeholder ──────────────────────────── */
+.data-unavailable {
+  font-family: var(--mono); font-size: 10px; color: var(--ink4);
+  padding: 12px; text-align: center; font-style: italic;
+}
+
+/* ══ BAND 1: League results | Non-league results ══ */
+.band1 { display: grid; grid-template-columns: 1fr 236px; gap: 14px; margin-top: 12px; align-items: start }
+
+.rt { width: 100%; border-collapse: collapse; font-family: var(--mono); font-size: 10px }
+.rt th { font-size: 8px; color: var(--ink4); font-weight: 400; padding: 2px 3px; border-bottom: 1px solid var(--ink); white-space: nowrap }
+.rt td { padding: 2px 3px; border-bottom: 0.5px solid var(--paper3); vertical-align: middle; font-size: 10px; color: var(--ink2); white-space: nowrap }
+.rt td.hr { text-align: right; font-size: 8px; color: var(--ink4); width: 18px; padding-right: 1px }
+.rt td.hm { text-align: right; font-weight: 500; color: var(--ink); width: 34px; padding-right: 4px }
+.rt td.sc { text-align: center; font-weight: 500; color: var(--ink); width: 46px; border-left: 0.5px solid var(--paper3); border-right: 0.5px solid var(--paper3); padding: 2px 4px; background: var(--paper2) }
+.rt td.aw { text-align: left; font-weight: 500; color: var(--ink); width: 34px; padding-left: 4px }
+.rt td.ar { text-align: left; font-size: 8px; color: var(--ink4); width: 18px; padding-left: 1px }
+.rt td.xg { color: var(--ink3); text-align: right; width: 50px }
+.rt td.sot { color: var(--ink3); text-align: right; width: 22px }
+.rt td.ps { color: var(--ink3); text-align: right; width: 26px }
+.rt td.hl { color: var(--ink3); font-size: 9px; text-align: left; overflow: hidden; text-overflow: clip }
+.rt tr.ledger td { border-top: 1px solid var(--rule) }
+
+/* ── Non-league panel ──────────────────────────────────────── */
+.nl-wrap { background: var(--blue-panel); border: 0.5px solid var(--blue-rule); border-radius: 4px; padding: 8px 10px }
+.nl { width: 100%; border-collapse: collapse; font-family: var(--mono); font-size: 10px }
+.nl th { font-size: 8px; color: var(--blue); font-weight: 400; padding: 2px 3px; border-bottom: 1px solid var(--blue-rule); text-align: left; white-space: nowrap }
+.nl th.c { text-align: center }
+.nl td { padding: 2px 3px; border-bottom: 0.5px solid var(--blue-rule); vertical-align: middle; font-size: 10px }
+.nl td.tm { font-weight: 500; color: var(--ink) }
+.nl td.sc { font-weight: 500; color: var(--blue); text-align: center; background: #e6edf5; padding: 2px 4px; border-left: 0.5px solid var(--blue-rule); border-right: 0.5px solid var(--blue-rule) }
+.nl td.ag { font-size: 8px; color: var(--blue); text-align: center; padding: 1px 3px 3px; border-bottom: 1px solid var(--blue-rule) }
+.nl .sh td { background: #e4ecf5; font-size: 8px; color: var(--blue); letter-spacing: .06em; padding: 2px 3px; border-bottom: 0.5px solid var(--blue-rule) }
+
+/* ══ BAND 2: Top earners | Young players ══ */
+.band2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 12px; align-items: start }
+
+.pt { width: 100%; border-collapse: collapse; font-family: var(--mono); font-size: 10px; table-layout: fixed }
+.pt th { font-size: 8px; color: var(--ink4); font-weight: 400; padding: 2px 3px; border-bottom: 1px solid var(--ink); text-align: right; white-space: nowrap }
+.pt th.tl { text-align: left }
+.pt td { padding: 2px 3px; border-bottom: 0.5px solid var(--paper3); text-align: right; color: var(--ink2); font-size: 10px; white-space: nowrap }
+.pt td.nm { text-align: left; font-family: var(--sans); font-weight: 500; font-size: 11px; color: var(--ink) }
+.pt td.cl { text-align: left; font-size: 9px; color: var(--ink3) }
+.pt td.po { text-align: left; font-size: 9px; color: var(--ink3) }
+.pt tr.under td { background: var(--red-light) }
+.pt tr.ledger td { border-top: 1px solid var(--rule) }
+.dp-b { background: var(--ink); color: var(--paper); font-size: 7px; padding: 1px 3px; border-radius: 2px; margin-left: 3px; font-family: var(--mono); vertical-align: middle }
+.pt td.sal { font-weight: 500; color: var(--ink) }
+.hot-b { background: var(--red); color: #fff; font-size: 7px; padding: 1px 4px; border-radius: 2px; margin-left: 3px; font-family: var(--mono); vertical-align: middle }
+
+/* ══ BAND 3: Standings E | W ══ */
+.band3 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 12px; align-items: start }
+
+.st { width: 100%; border-collapse: collapse; font-family: var(--mono); font-size: 10px; table-layout: fixed }
+.st th { font-size: 8px; color: var(--ink4); font-weight: 400; padding: 2px 3px; border-bottom: 1px solid var(--ink); text-align: right; white-space: nowrap }
+.st th:first-child { text-align: center; width: 16px }
+.st th:nth-child(2) { text-align: left; width: 36px }
+.st td { padding: 2px 3px; text-align: right; border-bottom: 0.5px solid var(--paper3); color: var(--ink2); font-size: 10px }
+.st td:first-child { text-align: center }
+.st td:nth-child(2) { text-align: left; font-weight: 500; color: var(--ink) }
+.st tr.po td { border-left: 2px solid var(--green) }
+.st tr.bb td { border-left: 2px solid var(--amber) }
+.st tr:not(.po):not(.bb) td { border-left: 2px solid transparent }
+.xp { color: var(--green) }
+.xn { color: var(--red) }
+.po-sep { height: 0.5px; background: var(--rule); opacity: .5; margin: 1px 0 }
+.leg { display: flex; gap: 14px; margin-top: 5px; font-family: var(--mono); font-size: 8px; color: var(--ink4) }
+.leg span { display: flex; align-items: center; gap: 3px }
+.sw { width: 8px; height: 8px; display: inline-block }
+
+/* ══ BAND 4: Upcoming league | Non-league ══ */
+.band4 { display: grid; grid-template-columns: 1fr 236px; gap: 14px; margin-top: 12px; align-items: start }
+
+.up-wrap { border: 0.5px solid var(--rule); border-radius: 4px; padding: 8px 10px; background: var(--paper) }
+.up-nl-wrap { background: var(--blue-panel); border: 0.5px solid var(--blue-rule); border-radius: 4px; padding: 8px 10px }
+
+.ut { width: 100%; border-collapse: collapse; font-family: var(--mono); font-size: 10px }
+.ut th { font-size: 8px; color: var(--ink4); font-weight: 400; padding: 2px 3px; border-bottom: 1px solid var(--ink); white-space: nowrap }
+.ut td { padding: 2px 3px; border-bottom: 0.5px solid var(--paper3); vertical-align: middle; font-size: 10px; color: var(--ink2) }
+.ut td.hr { text-align: right; font-size: 8px; color: var(--ink4); width: 18px; padding-right: 1px }
+.ut td.hm { text-align: right; font-weight: 500; color: var(--ink); width: 34px; padding-right: 4px }
+.ut td.sc { text-align: center; color: var(--ink2); font-weight: 500; width: 54px; border-left: 0.5px solid var(--paper3); border-right: 0.5px solid var(--paper3); padding: 2px 4px; white-space: nowrap }
+.ut td.aw { text-align: left; font-weight: 500; color: var(--ink); width: 34px; padding-left: 4px }
+.ut td.ar { text-align: left; font-size: 8px; color: var(--ink4); width: 18px; padding-left: 1px }
+.ut td.hl { font-family: var(--mono); font-style: italic; font-size: 9px; color: var(--ink3); white-space: normal; line-height: 1.3 }
+
+.utnl { width: 100%; border-collapse: collapse; font-family: var(--mono); font-size: 10px }
+.utnl th { font-size: 8px; color: var(--blue); font-weight: 400; padding: 2px 3px; border-bottom: 1px solid var(--blue-rule); white-space: nowrap }
+.utnl td { padding: 2px 3px; border-bottom: 0.5px solid var(--blue-rule); vertical-align: middle; font-size: 10px }
+.utnl td.tm { font-weight: 500; color: var(--ink) }
+.utnl td.sc { text-align: center; color: var(--blue); font-weight: 500; border-left: 0.5px solid var(--blue-rule); border-right: 0.5px solid var(--blue-rule); background: #e6edf5; padding: 2px 4px }
+.utnl td.cx { font-size: 9px; color: var(--ink3); font-style: italic }
+
+/* ── Footer ────────────────────────────────────────────────── */
+.footer { border-top: 3px double var(--ink); margin-top: 14px; padding: 6px 0 2px; display: flex; justify-content: space-between }
+.footer span { font-family: var(--mono); font-size: 9px; color: var(--ink4) }
+
+/* ══ Responsive ════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .band1, .band4 { grid-template-columns: 1fr }
+  .band2, .band3 { grid-template-columns: 1fr }
+}
+
+@media (max-width: 640px) {
+  .wrap { padding: 8px 10px }
+  .site-name { font-size: 22px }
+  .mast-inner { flex-direction: column; gap: 4px }
+  .mast-date { text-align: left }
+  .dots { justify-content: flex-start }
+}
+
+/* ══ Print ═════════════════════════════════════════════════════ */
+@media print {
+  body { background: #fff; color: #000 }
+  .wrap { max-width: 100%; padding: 0 }
+  .dots { display: none }
+  .skip-link { display: none }
+  .band3 { page-break-before: always }
+  :root {
+    --paper: #fff; --paper2: #f5f5f5; --paper3: #eee;
+    --rule: #ccc; --blue-panel: #f8f8ff; --blue-rule: #ddd;
+  }
+  @page { margin: 1cm }
+  @top-center { content: "MLS Water Cooler" }
+}

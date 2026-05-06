@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MLS Water Cooler</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="wrap" id="main">
+
+    <!-- Masthead -->
+    <header class="masthead">
+      <div class="mast-inner">
+        <div class="site-name">MLS Water Cooler</div>
+        <div>
+          <span class="mast-date" id="mast-date"></span>
+          <div class="dots" id="source-dots" role="status"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ══ BAND 1: League results | Non-league results ══ -->
+    <section class="band1" aria-label="Match results">
+      <div>
+        <div class="sec-label" id="league-label">League results</div>
+        <table class="rt">
+          <thead><tr>
+            <th scope="col" style="text-align:right;width:18px"></th>
+            <th scope="col" style="text-align:right;width:34px">Home</th>
+            <th scope="col" style="text-align:center;width:46px">Score</th>
+            <th scope="col" style="text-align:left;width:34px">Away</th>
+            <th scope="col" style="text-align:left;width:18px"></th>
+            <th scope="col" style="text-align:right;width:50px">xG</th>
+            <th scope="col" style="text-align:right;width:22px">SOT</th>
+            <th scope="col" style="text-align:right;width:26px">Poss</th>
+            <th scope="col" style="text-align:left">Highlights</th>
+          </tr></thead>
+          <tbody id="league-results-body"></tbody>
+        </table>
+        <div class="note">rank shown at kickoff</div>
+      </div>
+
+      <div class="nl-wrap">
+        <div class="sec-label-nl">Non-League results</div>
+        <table class="nl">
+          <thead><tr>
+            <th scope="col" style="width:35%">Home</th>
+            <th scope="col" class="c" style="width:28%">Score</th>
+            <th scope="col" style="width:35%">Away</th>
+          </tr></thead>
+          <tbody id="non-league-results-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ══ BAND 2: Top earners | Young players ══ -->
+    <section class="band2" aria-label="Player performance">
+      <div>
+        <div class="sec-label">Top earners — per 90</div>
+        <table class="pt">
+          <thead><tr>
+            <th scope="col" class="tl" style="width:100px">Player</th>
+            <th scope="col" class="tl" style="width:32px">Club</th>
+            <th scope="col" class="tl" style="width:28px">Pos</th>
+            <th scope="col" style="width:42px">Salary</th>
+            <th scope="col" style="width:22px">GP</th>
+            <th scope="col" style="width:38px">Avg Min</th>
+            <th scope="col" style="width:30px">G/90</th>
+            <th scope="col" style="width:30px">A/90</th>
+            <th scope="col" style="width:36px">G+A/90</th>
+            <th scope="col" style="width:40px">xG+xA/90</th>
+          </tr></thead>
+          <tbody id="top-earners-body"></tbody>
+        </table>
+        <div class="note">Capology est. &middot; not official guaranteed compensation</div>
+        <div class="note">Red = zero G+A this season</div>
+      </div>
+
+      <div>
+        <div class="sec-label">Young players — age 22 or under, per 90</div>
+        <table class="pt">
+          <thead><tr>
+            <th scope="col" class="tl" style="width:100px">Player</th>
+            <th scope="col" class="tl" style="width:32px">Club</th>
+            <th scope="col" class="tl" style="width:28px">Pos</th>
+            <th scope="col" style="width:22px">Age</th>
+            <th scope="col" style="width:22px">GP</th>
+            <th scope="col" style="width:38px">Avg Min</th>
+            <th scope="col" style="width:30px">G/90</th>
+            <th scope="col" style="width:30px">A/90</th>
+            <th scope="col" style="width:36px">G+A/90</th>
+            <th scope="col" style="width:40px">xG+xA/90</th>
+          </tr></thead>
+          <tbody id="young-players-body"></tbody>
+        </table>
+        <div class="note">HOT = G or A in each of last 3 · Min. 180 min to qualify</div>
+      </div>
+    </section>
+
+    <!-- ══ BAND 3: Standings E | W ══ -->
+    <section class="band3" aria-label="Conference standings">
+      <div>
+        <div class="sec-label">Eastern Conference</div>
+        <table class="st">
+          <thead><tr>
+            <th scope="col">#</th>
+            <th scope="col">Club</th>
+            <th scope="col">GP</th>
+            <th scope="col">Pts</th>
+            <th scope="col">GD</th>
+            <th scope="col">xGD</th>
+          </tr></thead>
+          <tbody id="standings-east-body"></tbody>
+        </table>
+        <div class="leg">
+          <span><span class="sw" style="border-left:2px solid var(--green);background:transparent"></span>Top 4</span>
+          <span><span class="sw" style="border-left:2px solid var(--amber);background:transparent"></span>Bubble 7–10</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="sec-label">Western Conference</div>
+        <table class="st">
+          <thead><tr>
+            <th scope="col">#</th>
+            <th scope="col">Club</th>
+            <th scope="col">GP</th>
+            <th scope="col">Pts</th>
+            <th scope="col">GD</th>
+            <th scope="col">xGD</th>
+          </tr></thead>
+          <tbody id="standings-west-body"></tbody>
+        </table>
+        <div class="leg">
+          <span><span class="sw" style="border-left:2px solid var(--green);background:transparent"></span>Top 4</span>
+          <span><span class="sw" style="border-left:2px solid var(--amber);background:transparent"></span>Bubble 7–10</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ BAND 4: Upcoming league | Non-league ══ -->
+    <section class="band4" aria-label="Upcoming fixtures">
+      <div class="up-wrap">
+        <div class="sec-label" id="upcoming-label">Upcoming fixtures</div>
+        <table class="ut">
+          <thead><tr>
+            <th scope="col" style="text-align:right;width:18px"></th>
+            <th scope="col" style="text-align:right;width:34px">Home</th>
+            <th scope="col" style="text-align:center;width:58px">Kickoff</th>
+            <th scope="col" style="text-align:left;width:34px">Away</th>
+            <th scope="col" style="text-align:left;width:18px"></th>
+            <th scope="col" style="text-align:left">Matchup</th>
+          </tr></thead>
+          <tbody id="upcoming-league-body"></tbody>
+        </table>
+      </div>
+
+      <div class="up-nl-wrap">
+        <div class="sec-label-nl">Upcoming — Non-League</div>
+        <table class="utnl">
+          <thead><tr>
+            <th scope="col" style="width:30%">Home</th>
+            <th scope="col" style="text-align:center;width:26%">Kickoff</th>
+            <th scope="col" style="width:30%">Away</th>
+            <th scope="col">Context</th>
+          </tr></thead>
+          <tbody id="upcoming-non-league-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <span id="footer-sources">Capology · FotMob · Transfermarkt · SofaScore</span>
+      <span>MLS Water Cooler · 2026</span>
+    </footer>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

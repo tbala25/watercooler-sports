@@ -1,0 +1,462 @@
+[
+  {
+    "player": "Darren Yapi",
+    "player_normalized": "darren yapi",
+    "club": "Colorado Rapids",
+    "club_abbr": "COL",
+    "position": "FWD",
+    "dob": null,
+    "age": 21,
+    "nationality": "",
+    "is_homegrown": false,
+    "is_designated_player": false,
+    "gp": 5,
+    "total_minutes": 348,
+    "avg_minutes": 70,
+    "goals": 2,
+    "assists": 2,
+    "goals_per90": 0.52,
+    "assists_per90": 0.52,
+    "ga_per90": 1.03,
+    "xg_per90": 0.34,
+    "xag_per90": 0.18,
+    "xgxa_per90": 0.52,
+    "hot_streak": false,
+    "insufficient_minutes": false,
+    "recent_matches": [
+      {
+        "date": "2026-03-22",
+        "opponent": "SKC",
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "date": "2026-03-14",
+        "opponent": "NYC",
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "date": "2026-03-08",
+        "opponent": "LAG",
+        "goals": 0,
+        "assists": 0
+      }
+    ],
+    "source": "fotmob+capology"
+  },
+  {
+    "player": "Telasco Segovia",
+    "player_normalized": "telasco segovia",
+    "club": "Inter Miami CF",
+    "club_abbr": "MIA",
+    "position": "MID",
+    "dob": null,
+    "age": 22,
+    "nationality": "",
+    "is_homegrown": false,
+    "is_designated_player": false,
+    "gp": 5,
+    "total_minutes": 375,
+    "avg_minutes": 75,
+    "goals": 1,
+    "assists": 3,
+    "goals_per90": 0.24,
+    "assists_per90": 0.72,
+    "ga_per90": 0.96,
+    "xg_per90": 0.14,
+    "xag_per90": 0.1,
+    "xgxa_per90": 0.24,
+    "hot_streak": false,
+    "insufficient_minutes": false,
+    "recent_matches": [
+      {
+        "date": "2026-03-22",
+        "opponent": "NYC",
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "date": "2026-03-14",
+        "opponent": "CLT",
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "date": "2026-03-07",
+        "opponent": "DCU",
+        "goals": 0,
+        "assists": 0
+      }
+    ],
+    "source": "fotmob+capology"
+  },
+  {
+    "player": "Julian Hall",
+    "player_normalized": "julian hall",
+    "club": "New York Red Bulls",
+    "club_abbr": "NYRB",
+    "position": "FWD",
+    "dob": null,
+    "age": 17,
+    "nationality": "",
+    "is_homegrown": false,
+    "is_designated_player": false,
+    "gp": 5,
+    "total_minutes": 442,
+    "avg_minutes": 88,
+    "goals": 4,
+    "assists": 0,
+    "goals_per90": 0.81,
+    "assists_per90": 0.0,
+    "ga_per90": 0.81,
+    "xg_per90": 0.88,
+    "xag_per90": 0.06,
+    "xgxa_per90": 0.94,
+    "hot_streak": false,
+    "insufficient_minutes": false,
+    "recent_matches": [
+      {
+        "date": "2026-03-21",
+        "opponent": "CLT",
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "date": "2026-03-14",
+        "opponent": "TOR",
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "date": "2026-03-08",
+        "opponent": "MTL",
+        "goals": 0,
+        "assists": 0
+      }
+    ],
+    "source": "fotmob+capology"
+  },
+  {
+    "player": "Wayne Frederick",
+    "player_normalized": "wayne frederick",
+    "club": "Colorado Rapids",
+    "club_abbr": "COL",
+    "position": "MID",
+    "dob": null,
+    "age": 21,
+    "nationality": "",
+    "is_homegrown": false,
+    "is_designated_player": false,
+    "gp": 5,
+    "total_minutes": 237,
+    "avg_minutes": 47,
+    "goals": 1,
+    "assists": 1,
+    "goals_per90": 0.38,
+    "assists_per90": 0.38,
+    "ga_per90": 0.76,
+    "xg_per90": 0.38,
+    "xag_per90": 0.04,
+    "xgxa_per90": 0.42,
+    "hot_streak": false,
+    "insufficient_minutes": false,
+    "recent_matches": [
+      {
+        "date": "2026-03-22",
+        "opponent": "SKC",
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "date": "2026-03-14",
+        "opponent": "NYC",
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "date": "2026-03-08",
+        "opponent": "LAG",
+        "goals": 0,
+        "assists": 0
+      }
+    ],
+    "source": "fotmob+capology"
+  },
+  {
+    "player": "Ender Echenique",
+    "player_normalized": "ender echenique",
+    "club": "FC Cincinnati",
+    "club_abbr": "FCC",
+    "position": "MID",
+    "dob": null,
+    "age": 21,
+    "nationality": "2",
+    "is_homegrown": false,
+    "is_designated_player": false,
+    "gp": 5,
+    "total_minutes": 384,
+    "avg_minutes": 77,
+    "goals": 1,
+    "assists": 2,
+    "goals_per90": 0.23,
+    "assists_per90": 0.47,
+    "ga_per90": 0.7,
+    "xg_per90": 0.07,
+    "xag_per90": 0.23,
+    "xgxa_per90": 0.3,
+    "hot_streak": false,
+    "insufficient_minutes": false,
+    "recent_matches": [
+      {
+        "date": "2026-03-22",
+        "opponent": "MTL",
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "date": "2026-03-15",
+        "opponent": "NE",
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "date": "2026-03-08",
+        "opponent": "TOR",
+        "goals": 0,
+        "assists": 0
+      }
+    ],
+    "source": "fotmob+roster_cache"
+  },
+  {
+    "player": "Agustín Ojeda",
+    "player_normalized": "agustin ojeda",
+    "club": "New York City FC",
+    "club_abbr": "NYC",
+    "position": "MID",
+    "dob": null,
+    "age": 21,
+    "nationality": "",
+    "is_homegrown": false,
+    "is_designated_player": false,
+    "gp": 5,
+    "total_minutes": 413,
+    "avg_minutes": 83,
+    "goals": 2,
+    "assists": 1,
+    "goals_per90": 0.44,
+    "assists_per90": 0.22,
+    "ga_per90": 0.65,
+    "xg_per90": 0.24,
+    "xag_per90": 0.13,
+    "xgxa_per90": 0.37,
+    "hot_streak": false,
+    "insufficient_minutes": false,
+    "recent_matches": [
+      {
+        "date": "2026-03-22",
+        "opponent": "MIA",
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "date": "2026-03-14",
+        "opponent": "COL",
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "date": "2026-03-07",
+        "opponent": "ORL",
+        "goals": 0,
+        "assists": 0
+      }
+    ],
+    "source": "fotmob+capology"
+  },
+  {
+    "player": "Paxten Aaronson",
+    "player_normalized": "paxten aaronson",
+    "club": "Colorado Rapids",
+    "club_abbr": "COL",
+    "position": "MID",
+    "dob": null,
+    "age": 22,
+    "nationality": "1",
+    "is_homegrown": false,
+    "is_designated_player": false,
+    "gp": 5,
+    "total_minutes": 417,
+    "avg_minutes": 83,
+    "goals": 2,
+    "assists": 1,
+    "goals_per90": 0.43,
+    "assists_per90": 0.22,
+    "ga_per90": 0.65,
+    "xg_per90": 0.22,
+    "xag_per90": 0.3,
+    "xgxa_per90": 0.52,
+    "hot_streak": false,
+    "insufficient_minutes": false,
+    "recent_matches": [
+      {
+        "date": "2026-03-22",
+        "opponent": "SKC",
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "date": "2026-03-14",
+        "opponent": "NYC",
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "date": "2026-03-08",
+        "opponent": "LAG",
+        "goals": 0,
+        "assists": 0
+      }
+    ],
+    "source": "fotmob+roster_cache"
+  },
+  {
+    "player": "Dor Turgeman",
+    "player_normalized": "dor turgeman",
+    "club": "New England Revolution",
+    "club_abbr": "NE",
+    "position": "FWD",
+    "dob": null,
+    "age": 22,
+    "nationality": "5",
+    "is_homegrown": false,
+    "is_designated_player": false,
+    "gp": 4,
+    "total_minutes": 300,
+    "avg_minutes": 75,
+    "goals": 1,
+    "assists": 1,
+    "goals_per90": 0.3,
+    "assists_per90": 0.3,
+    "ga_per90": 0.6,
+    "xg_per90": 0.18,
+    "xag_per90": 0.06,
+    "xgxa_per90": 0.24,
+    "hot_streak": false,
+    "insufficient_minutes": false,
+    "recent_matches": [
+      {
+        "date": "2026-03-22",
+        "opponent": "STL",
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "date": "2026-03-15",
+        "opponent": "FCC",
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "date": "2026-02-28",
+        "opponent": "NYRB",
+        "goals": 0,
+        "assists": 0
+      }
+    ],
+    "source": "fotmob+roster_cache"
+  },
+  {
+    "player": "Aiden Hezarkhani",
+    "player_normalized": "aiden hezarkhani",
+    "club": "Real Salt Lake",
+    "club_abbr": "RSL",
+    "position": "MID",
+    "dob": null,
+    "age": 18,
+    "nationality": "",
+    "is_homegrown": false,
+    "is_designated_player": false,
+    "gp": 5,
+    "total_minutes": 322,
+    "avg_minutes": 64,
+    "goals": 2,
+    "assists": 0,
+    "goals_per90": 0.56,
+    "assists_per90": 0.0,
+    "ga_per90": 0.56,
+    "xg_per90": 0.08,
+    "xag_per90": 0.08,
+    "xgxa_per90": 0.17,
+    "hot_streak": false,
+    "insufficient_minutes": false,
+    "recent_matches": [
+      {
+        "date": "2026-03-22",
+        "opponent": "SDG",
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "date": "2026-03-15",
+        "opponent": "ATX",
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "date": "2026-03-08",
+        "opponent": "ATL",
+        "goals": 0,
+        "assists": 0
+      }
+    ],
+    "source": "fotmob+capology"
+  },
+  {
+    "player": "David Martínez",
+    "player_normalized": "david martinez",
+    "club": "LAFC",
+    "club_abbr": "LAF",
+    "position": "FWD",
+    "dob": null,
+    "age": 19,
+    "nationality": "6",
+    "is_homegrown": false,
+    "is_designated_player": false,
+    "gp": 5,
+    "total_minutes": 336,
+    "avg_minutes": 67,
+    "goals": 2,
+    "assists": 0,
+    "goals_per90": 0.54,
+    "assists_per90": 0.0,
+    "ga_per90": 0.54,
+    "xg_per90": 0.27,
+    "xag_per90": 0.16,
+    "xgxa_per90": 0.43,
+    "hot_streak": false,
+    "insufficient_minutes": false,
+    "recent_matches": [
+      {
+        "date": "2026-03-22",
+        "opponent": "ATX",
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "date": "2026-03-15",
+        "opponent": "STL",
+        "goals": 0,
+        "assists": 0
+      },
+      {
+        "date": "2026-03-08",
+        "opponent": "DAL",
+        "goals": 0,
+        "assists": 0
+      }
+    ],
+    "source": "fotmob+roster_cache"
+  }
+]

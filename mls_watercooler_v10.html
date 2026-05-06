@@ -1,0 +1,346 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Playfair+Display:wght@700&family=IBM+Plex+Sans+Condensed:wght@400;500&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#0f0f0f;--ink2:#3a3a3a;--ink3:#6b6b6b;--ink4:#999;
+  --paper:#f7f5f0;--paper2:#eeece7;--paper3:#e4e1da;--rule:#c8c5be;
+  --red:#C8102E;--red-light:#fde8ec;--green:#2a7a3b;
+  --amber:#b87800;--blue:#1a4f8a;--blue-panel:#f0f4f9;--blue-rule:#c8d8eb;
+  --mono:'IBM Plex Mono',monospace;--sans:'IBM Plex Sans Condensed',sans-serif;--serif:'Playfair Display',serif;
+}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:13px;line-height:1.4}
+.wrap{max-width:920px;margin:0 auto;padding:12px 16px}
+
+.masthead{border-bottom:3px double var(--ink);padding:10px 0 8px}
+.mast-inner{display:flex;align-items:baseline;justify-content:space-between}
+.site-name{font-family:var(--serif);font-size:30px;font-weight:700;color:var(--ink)}
+.mast-date{font-family:var(--mono);font-size:10px;color:var(--ink3);display:block;margin-bottom:4px;text-align:right}
+.dots{display:flex;gap:10px;justify-content:flex-end}
+.dot{font-family:var(--mono);font-size:9px;display:flex;align-items:center;gap:3px}
+.dot::before{content:'';width:6px;height:6px;border-radius:50%;display:inline-block}
+.ok::before{background:var(--green)}
+
+.sec-label{font-family:var(--mono);font-size:9px;letter-spacing:.12em;color:var(--ink4);text-transform:uppercase;border-bottom:1px solid var(--rule);padding-bottom:3px;margin-bottom:6px}
+.sec-label-nl{font-family:var(--mono);font-size:9px;letter-spacing:.12em;color:var(--blue);text-transform:uppercase;border-bottom:1px solid var(--blue-rule);padding-bottom:3px;margin-bottom:6px}
+.note{font-family:var(--mono);font-size:8px;color:var(--ink4);margin-top:3px}
+
+/* ── BAND 1: League results | Non-league results ── */
+.band1{display:grid;grid-template-columns:1fr 236px;gap:14px;margin-top:12px;align-items:start}
+
+.rt{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:10px}
+.rt th{font-size:8px;color:var(--ink4);font-weight:400;padding:2px 3px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.rt td{padding:2px 3px;border-bottom:0.5px solid var(--paper3);vertical-align:middle;font-size:10px;color:var(--ink2);white-space:nowrap}
+.rt td.hr{text-align:right;font-size:8px;color:var(--ink4);width:18px;padding-right:1px}
+.rt td.hm{text-align:right;font-weight:500;color:var(--ink);width:34px;padding-right:4px}
+.rt td.sc{text-align:center;font-weight:500;color:var(--ink);width:46px;border-left:0.5px solid var(--paper3);border-right:0.5px solid var(--paper3);padding:2px 4px;background:var(--paper2)}
+.rt td.aw{text-align:left;font-weight:500;color:var(--ink);width:34px;padding-left:4px}
+.rt td.ar{text-align:left;font-size:8px;color:var(--ink4);width:18px;padding-left:1px}
+.rt td.xg{color:var(--ink3);text-align:right;width:50px}
+.rt td.sot{color:var(--ink3);text-align:right;width:22px}
+.rt td.ps{color:var(--ink3);text-align:right;width:26px}
+.rt td.hl{color:var(--ink3);font-size:9px;text-align:left;overflow:hidden;text-overflow:clip}
+.rt tr.ledger td{border-top:1px solid var(--rule)}
+
+.nl-wrap{background:var(--blue-panel);border:0.5px solid var(--blue-rule);border-radius:4px;padding:8px 10px}
+.nl{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:10px}
+.nl th{font-size:8px;color:var(--blue);font-weight:400;padding:2px 3px;border-bottom:1px solid var(--blue-rule);text-align:left;white-space:nowrap}
+.nl th.c{text-align:center}
+.nl td{padding:2px 3px;border-bottom:0.5px solid var(--blue-rule);vertical-align:middle;font-size:10px}
+.nl td.tm{font-weight:500;color:var(--ink)}
+.nl td.sc{font-weight:500;color:var(--blue);text-align:center;background:#e6edf5;padding:2px 4px;border-left:0.5px solid var(--blue-rule);border-right:0.5px solid var(--blue-rule)}
+.nl td.ag{font-size:8px;color:var(--blue);text-align:center;padding:1px 3px 3px;border-bottom:1px solid var(--blue-rule)}
+.nl .sh td{background:#e4ecf5;font-size:8px;color:var(--blue);letter-spacing:.06em;padding:2px 3px;border-bottom:0.5px solid var(--blue-rule)}
+
+/* ── BAND 2: Top earners | Young players ── */
+.band2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px;align-items:start}
+
+.pt{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:10px;table-layout:fixed}
+.pt th{font-size:8px;color:var(--ink4);font-weight:400;padding:2px 3px;border-bottom:1px solid var(--ink);text-align:right;white-space:nowrap}
+.pt th.tl{text-align:left}
+.pt td{padding:2px 3px;border-bottom:0.5px solid var(--paper3);text-align:right;color:var(--ink2);font-size:10px;white-space:nowrap}
+.pt td.nm{text-align:left;font-family:var(--sans);font-weight:500;font-size:11px;color:var(--ink)}
+.pt td.cl{text-align:left;font-size:9px;color:var(--ink3)}
+.pt td.po{text-align:left;font-size:9px;color:var(--ink3)}
+.pt tr.under td{background:var(--red-light)}
+.pt tr.ledger td{border-top:1px solid var(--rule)}
+.dp-b{background:var(--ink);color:var(--paper);font-size:7px;padding:1px 3px;border-radius:2px;margin-left:3px;font-family:var(--mono);vertical-align:middle}
+.sal{font-weight:500;color:var(--ink) !important}
+.hot-b{background:var(--red);color:#fff;font-size:7px;padding:1px 4px;border-radius:2px;margin-left:3px;font-family:var(--mono);vertical-align:middle}
+
+/* ── BAND 3: Standings E | W ── */
+.band3{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px;align-items:start}
+
+.st{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:10px;table-layout:fixed}
+.st th{font-size:8px;color:var(--ink4);font-weight:400;padding:2px 3px;border-bottom:1px solid var(--ink);text-align:right;white-space:nowrap}
+.st th:first-child{text-align:center;width:16px}
+.st th:nth-child(2){text-align:left;width:36px}
+.st td{padding:2px 3px;text-align:right;border-bottom:0.5px solid var(--paper3);color:var(--ink2);font-size:10px}
+.st td:first-child{text-align:center}
+.st td:nth-child(2){text-align:left;font-weight:500;color:var(--ink)}
+.st tr.po td{border-left:2px solid var(--green)}
+.st tr.bb td{border-left:2px solid var(--amber)}
+.st tr:not(.po):not(.bb) td{border-left:2px solid transparent}
+.xp{color:var(--green)}.xn{color:var(--red)}
+.po-sep{height:0.5px;background:var(--rule);opacity:.5;margin:1px 0}
+.leg{display:flex;gap:14px;margin-top:5px;font-family:var(--mono);font-size:8px;color:var(--ink4)}
+.leg span{display:flex;align-items:center;gap:3px}
+.sw{width:8px;height:8px;display:inline-block}
+
+/* ── BAND 4: Upcoming league | Non-league ── */
+.band4{display:grid;grid-template-columns:1fr 236px;gap:14px;margin-top:12px;align-items:start}
+
+.up-wrap{border:0.5px solid var(--rule);border-radius:4px;padding:8px 10px;background:var(--paper)}
+.up-nl-wrap{background:var(--blue-panel);border:0.5px solid var(--blue-rule);border-radius:4px;padding:8px 10px}
+
+.ut{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:10px}
+.ut th{font-size:8px;color:var(--ink4);font-weight:400;padding:2px 3px;border-bottom:1px solid var(--ink);white-space:nowrap}
+.ut td{padding:2px 3px;border-bottom:0.5px solid var(--paper3);vertical-align:middle;font-size:10px;color:var(--ink2)}
+.ut td.hr{text-align:right;font-size:8px;color:var(--ink4);width:18px;padding-right:1px}
+.ut td.hm{text-align:right;font-weight:500;color:var(--ink);width:34px;padding-right:4px}
+.ut td.sc{text-align:center;color:var(--ink2);font-weight:500;width:54px;border-left:0.5px solid var(--paper3);border-right:0.5px solid var(--paper3);padding:2px 4px}
+.ut td.aw{text-align:left;font-weight:500;color:var(--ink);width:34px;padding-left:4px}
+.ut td.ar{text-align:left;font-size:8px;color:var(--ink4);width:18px;padding-left:1px}
+.ut td.hl{font-family:var(--mono);font-style:italic;font-size:9px;color:var(--ink3);white-space:normal;line-height:1.3}
+
+.utnl{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:10px}
+.utnl th{font-size:8px;color:var(--blue);font-weight:400;padding:2px 3px;border-bottom:1px solid var(--blue-rule);white-space:nowrap}
+.utnl td{padding:2px 3px;border-bottom:0.5px solid var(--blue-rule);vertical-align:middle;font-size:10px}
+.utnl td.tm{font-weight:500;color:var(--ink)}
+.utnl td.sc{text-align:center;color:var(--blue);font-weight:500;border-left:0.5px solid var(--blue-rule);border-right:0.5px solid var(--blue-rule);background:#e6edf5;padding:2px 4px}
+.utnl td.cx{font-size:9px;color:var(--ink3);font-style:italic}
+
+.footer{border-top:3px double var(--ink);margin-top:14px;padding:6px 0 2px;display:flex;justify-content:space-between}
+.footer span{font-family:var(--mono);font-size:9px;color:var(--ink4)}
+</style>
+
+<div class="wrap">
+
+<div class="masthead">
+  <div class="mast-inner">
+    <div class="site-name">MLS Water Cooler</div>
+    <div>
+      <span class="mast-date">Monday, March 24, 2026 &nbsp;·&nbsp; Matchday 8</span>
+      <div class="dots">
+        <span class="dot ok">FBref</span>
+        <span class="dot ok">FotMob</span>
+        <span class="dot ok">SofaScore</span>
+        <span class="dot ok">MLS</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ BAND 1: League results | Non-league results ══ -->
+<div class="band1">
+  <div>
+    <div class="sec-label">League — Matchday 8 results</div>
+    <table class="rt">
+      <thead><tr>
+        <th style="text-align:right;width:18px"></th>
+        <th style="text-align:right;width:34px">Home</th>
+        <th style="text-align:center;width:46px">Score</th>
+        <th style="text-align:left;width:34px">Away</th>
+        <th style="text-align:left;width:18px"></th>
+        <th style="text-align:right;width:50px">xG</th>
+        <th style="text-align:right;width:22px">SOT</th>
+        <th style="text-align:right;width:26px">Poss</th>
+        <th style="text-align:left">Highlights</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="hr">E1</td><td class="hm">MIA</td><td class="sc">3 – 0</td><td class="aw">MTL</td><td class="ar">E11</td><td class="xg">2.4–0.4</td><td class="sot">9–2</td><td class="ps">62–38</td><td class="hl">Messi brace, pen 67'</td></tr>
+        <tr><td class="hr">W2</td><td class="hm">LAFC</td><td class="sc">2 – 1</td><td class="aw">POR</td><td class="ar">W7</td><td class="xg">1.8–0.9</td><td class="sot">6–3</td><td class="ps">58–42</td><td class="hl">Winner 90+2'</td></tr>
+        <tr><td class="hr">E2</td><td class="hm">PHI</td><td class="sc">1 – 1</td><td class="aw">NYC</td><td class="ar">E5</td><td class="xg">1.1–1.3</td><td class="sot">4–5</td><td class="ps">54–46</td><td class="hl">Equalizer 71'</td></tr>
+        <tr class="ledger"><td class="hr">W3</td><td class="hm">SEA</td><td class="sc">0 – 2</td><td class="aw">LAG</td><td class="ar">W1</td><td class="xg">0.6–1.9</td><td class="sot">2–6</td><td class="ps">49–51</td><td class="hl">Puig 2 assists</td></tr>
+        <tr><td class="hr">E6</td><td class="hm">NSH</td><td class="sc">1 – 0</td><td class="aw">ORL</td><td class="ar">E8</td><td class="xg">0.9–0.7</td><td class="sot">3–2</td><td class="ps">52–48</td><td class="hl">Muyl winner 58'</td></tr>
+        <tr><td class="hr">E3</td><td class="hm">CLB</td><td class="sc">2 – 2</td><td class="aw">ATL</td><td class="ar">E7</td><td class="xg">1.6–1.4</td><td class="sot">5–4</td><td class="ps">56–44</td><td class="hl">88' equalizer, VAR red</td></tr>
+        <tr class="ledger"><td class="hr">W5</td><td class="hm">COL</td><td class="sc">3 – 1</td><td class="aw">DAL</td><td class="ar">W9</td><td class="xg">2.1–1.0</td><td class="sot">7–3</td><td class="ps">53–47</td><td class="hl">Mihailovic hat-trick</td></tr>
+        <tr><td class="hr">E4</td><td class="hm">NYRB</td><td class="sc">0 – 0</td><td class="aw">NE</td><td class="ar">E7</td><td class="xg">0.8–0.6</td><td class="sot">3–3</td><td class="ps">51–49</td><td class="hl"></td></tr>
+        <tr><td class="hr">W4</td><td class="hm">ATX</td><td class="sc">1 – 2</td><td class="aw">SKC</td><td class="ar">W11</td><td class="xg">1.4–0.7</td><td class="sot">5–2</td><td class="ps">60–40</td><td class="hl">2 goals in final 10'</td></tr>
+        <tr class="ledger"><td class="hr">W8</td><td class="hm">MIN</td><td class="sc">2 – 1</td><td class="aw">RSL</td><td class="ar">W6</td><td class="xg">1.3–1.1</td><td class="sot">4–4</td><td class="ps">48–52</td><td class="hl">Taylor winner 79'</td></tr>
+        <tr><td class="hr">E9</td><td class="hm">CHI</td><td class="sc">0 – 1</td><td class="aw">TOR</td><td class="ar">E12</td><td class="xg">0.9–0.5</td><td class="sot">4–2</td><td class="ps">55–45</td><td class="hl"></td></tr>
+        <tr><td class="hr">E10</td><td class="hm">DCU</td><td class="sc">1 – 1</td><td class="aw">CIN</td><td class="ar">E6</td><td class="xg">1.0–1.2</td><td class="sot">3–4</td><td class="ps">46–54</td><td class="hl">Cucho bicycle kick 45'</td></tr>
+      </tbody>
+    </table>
+    <div class="note">rank shown at kickoff</div>
+  </div>
+
+  <div class="nl-wrap">
+    <div class="sec-label-nl">Non-League results</div>
+    <table class="nl">
+      <thead><tr>
+        <th style="width:35%">Home</th>
+        <th class="c" style="width:28%">Score</th>
+        <th style="width:35%">Away</th>
+      </tr></thead>
+      <tbody>
+        <tr class="sh"><td colspan="3">Leagues Cup · Group A</td></tr>
+        <tr><td class="tm">MIA</td><td class="sc">2 – 1</td><td class="tm">Cruz Azul</td></tr>
+        <tr><td colspan="3" class="ag">Agg: MIA leads 2–1</td></tr>
+        <tr><td class="tm">LAFC</td><td class="sc">0 – 0</td><td class="tm">Tigres</td></tr>
+        <tr><td colspan="3" class="ag">Agg: 0–0, leg 2 pending</td></tr>
+        <tr class="sh"><td colspan="3">CONCACAF CL · QF Leg 2</td></tr>
+        <tr><td class="tm">CLB</td><td class="sc">1 – 2</td><td class="tm">América</td></tr>
+        <tr><td colspan="3" class="ag" style="color:var(--red)">Agg: CLB out 2–4</td></tr>
+        <tr class="sh"><td colspan="3">US Open Cup · Rd 2</td></tr>
+        <tr><td class="tm">PHI</td><td class="sc">3 – 0</td><td class="tm">Richmond</td></tr>
+        <tr><td colspan="3" class="ag">Advances to Rd 3</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ══ BAND 2: Top earners | Young players ══ -->
+<div class="band2">
+  <div>
+    <div class="sec-label">Top earners — per 90</div>
+    <table class="pt">
+      <thead><tr>
+        <th class="tl" style="width:100px">Player</th>
+        <th class="tl" style="width:32px">Club</th>
+        <th class="tl" style="width:28px">Pos</th>
+        <th style="width:42px">Salary</th>
+        <th style="width:22px">GP</th>
+        <th style="width:38px">Avg Min</th>
+        <th style="width:30px">G/90</th>
+        <th style="width:30px">A/90</th>
+        <th style="width:36px">G+A/90</th>
+        <th style="width:40px">xG+xA/90</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="nm">L. Messi<span class="dp-b">DP</span></td><td class="cl">MIA</td><td class="po">FWD</td><td class="sal">$20.4M</td><td>8</td><td>76</td><td>1.18</td><td>0.73</td><td>1.91</td><td>1.74</td></tr>
+        <tr><td class="nm">L. Suárez<span class="dp-b">DP</span></td><td class="cl">MIA</td><td class="po">FWD</td><td class="sal">$8.1M</td><td>7</td><td>74</td><td>0.93</td><td>0.62</td><td>1.55</td><td>1.28</td></tr>
+        <tr><td class="nm">R. Puig<span class="dp-b">DP</span></td><td class="cl">LAG</td><td class="po">MID</td><td class="sal">$6.2M</td><td>7</td><td>69</td><td>0.50</td><td>1.00</td><td>1.50</td><td>1.38</td></tr>
+        <tr class="ledger"><td class="nm">C. Benteke<span class="dp-b">DP</span></td><td class="cl">LAFC</td><td class="po">FWD</td><td class="sal">$5.8M</td><td>8</td><td>79</td><td>0.86</td><td>0.29</td><td>1.14</td><td>1.02</td></tr>
+        <tr><td class="nm">C. Castellanos<span class="dp-b">DP</span></td><td class="cl">NYC</td><td class="po">FWD</td><td class="sal">$5.1M</td><td>7</td><td>75</td><td>0.76</td><td>0.45</td><td>1.21</td><td>1.05</td></tr>
+        <tr class="under ledger"><td class="nm">X. Arreaga<span class="dp-b">DP</span></td><td class="cl">SEA</td><td class="po">DEF</td><td class="sal">$4.9M</td><td>6</td><td>67</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.22</td></tr>
+        <tr class="under"><td class="nm">B. Expósito<span class="dp-b">DP</span></td><td class="cl">NE</td><td class="po">MID</td><td class="sal">$4.4M</td><td>5</td><td>64</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.50</td></tr>
+      </tbody>
+    </table>
+    <div class="note">Red = zero G+A this season</div>
+  </div>
+
+  <div>
+    <div class="sec-label">Young players — age 22 or under, per 90</div>
+    <table class="pt">
+      <thead><tr>
+        <th class="tl" style="width:100px">Player</th>
+        <th class="tl" style="width:32px">Club</th>
+        <th class="tl" style="width:28px">Pos</th>
+        <th style="width:22px">Age</th>
+        <th style="width:22px">GP</th>
+        <th style="width:38px">Avg Min</th>
+        <th style="width:30px">G/90</th>
+        <th style="width:30px">A/90</th>
+        <th style="width:36px">G+A/90</th>
+        <th style="width:40px">xG+xA/90</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="nm">C. Clark<span class="hot-b">HOT</span></td><td class="cl">NYRB</td><td class="po">MID</td><td>22</td><td>8</td><td>76</td><td>0.59</td><td>0.65</td><td>1.24</td><td>1.10</td></tr>
+        <tr><td class="nm">F. Kleemann<span class="hot-b">HOT</span></td><td class="cl">CIN</td><td class="po">FWD</td><td>19</td><td>6</td><td>63</td><td>0.64</td><td>0.43</td><td>1.08</td><td>0.94</td></tr>
+        <tr><td class="nm">J. Gomez</td><td class="cl">LAFC</td><td class="po">DEF</td><td>21</td><td>7</td><td>69</td><td>0.33</td><td>0.33</td><td>0.71</td><td>0.55</td></tr>
+        <tr class="ledger"><td class="nm">Cucho H.</td><td class="cl">CLB</td><td class="po">FWD</td><td>20</td><td>7</td><td>69</td><td>0.50</td><td>0.17</td><td>0.64</td><td>0.80</td></tr>
+        <tr><td class="nm">P. Aaronson</td><td class="cl">PHI</td><td class="po">MID</td><td>22</td><td>7</td><td>69</td><td>0.33</td><td>0.33</td><td>0.58</td><td>0.62</td></tr>
+        <tr><td class="nm">D. Luna</td><td class="cl">RSL</td><td class="po">MID</td><td>21</td><td>5</td><td>64</td><td>0.25</td><td>0.25</td><td>0.50</td><td>0.44</td></tr>
+      </tbody>
+    </table>
+    <div class="note">HOT = G or A in each of last 3 · Min. 180 min to qualify</div>
+  </div>
+</div>
+
+<!-- ══ BAND 3: Standings E | W ══ -->
+<div class="band3">
+  <div>
+    <div class="sec-label">Eastern Conference</div>
+    <table class="st">
+      <thead><tr><th>#</th><th>Club</th><th>GP</th><th>Pts</th><th>GD</th><th>xGD</th></tr></thead>
+      <tbody>
+        <tr class="po"><td>1</td><td>MIA</td><td>8</td><td>19</td><td>+9</td><td class="xp">+5.2</td></tr>
+        <tr class="po"><td>2</td><td>PHI</td><td>8</td><td>17</td><td>+6</td><td class="xp">+3.8</td></tr>
+        <tr class="po"><td>3</td><td>CLB</td><td>8</td><td>14</td><td>+3</td><td class="xp">+1.9</td></tr>
+        <tr class="po"><td>4</td><td>NYRB</td><td>8</td><td>12</td><td>+2</td><td class="xp">+0.8</td></tr>
+        <tr><td colspan="6"><div class="po-sep"></div></td></tr>
+        <tr class="bb"><td>7</td><td>NE</td><td>8</td><td>10</td><td>0</td><td class="xn">-0.4</td></tr>
+        <tr class="bb"><td>8</td><td>ORL</td><td>8</td><td>9</td><td>-2</td><td class="xn">-1.2</td></tr>
+        <tr class="bb"><td>9</td><td>NSH</td><td>8</td><td>9</td><td>-1</td><td class="xn">-0.9</td></tr>
+        <tr class="bb"><td>10</td><td>CHI</td><td>8</td><td>8</td><td>-4</td><td class="xn">-2.1</td></tr>
+      </tbody>
+    </table>
+    <div class="leg">
+      <span><span class="sw" style="border-left:2px solid var(--green);background:transparent"></span>Top 4</span>
+      <span><span class="sw" style="border-left:2px solid var(--amber);background:transparent"></span>Bubble 7–10</span>
+    </div>
+  </div>
+
+  <div>
+    <div class="sec-label">Western Conference</div>
+    <table class="st">
+      <thead><tr><th>#</th><th>Club</th><th>GP</th><th>Pts</th><th>GD</th><th>xGD</th></tr></thead>
+      <tbody>
+        <tr class="po"><td>1</td><td>LAG</td><td>8</td><td>18</td><td>+7</td><td class="xp">+4.1</td></tr>
+        <tr class="po"><td>2</td><td>LAFC</td><td>8</td><td>16</td><td>+5</td><td class="xp">+3.3</td></tr>
+        <tr class="po"><td>3</td><td>SEA</td><td>8</td><td>13</td><td>+1</td><td class="xn">-0.2</td></tr>
+        <tr class="po"><td>4</td><td>ATX</td><td>8</td><td>12</td><td>+2</td><td class="xp">+1.1</td></tr>
+        <tr><td colspan="6"><div class="po-sep"></div></td></tr>
+        <tr class="bb"><td>7</td><td>POR</td><td>8</td><td>9</td><td>-1</td><td class="xn">-0.6</td></tr>
+        <tr class="bb"><td>8</td><td>MIN</td><td>8</td><td>9</td><td>0</td><td class="xp">+0.3</td></tr>
+        <tr class="bb"><td>9</td><td>COL</td><td>8</td><td>9</td><td>0</td><td class="xn">-0.5</td></tr>
+        <tr class="bb"><td>10</td><td>SJ</td><td>8</td><td>7</td><td>-6</td><td class="xn">-3.8</td></tr>
+      </tbody>
+    </table>
+    <div class="leg">
+      <span><span class="sw" style="border-left:2px solid var(--green);background:transparent"></span>Top 4</span>
+      <span><span class="sw" style="border-left:2px solid var(--amber);background:transparent"></span>Bubble 7–10</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ BAND 4: Upcoming league | Non-league ══ -->
+<div class="band4" style="display:grid;grid-template-columns:1fr 236px;gap:14px;margin-top:12px;align-items:start">
+
+  <div class="up-wrap">
+    <div class="sec-label">Upcoming — Matchday 9</div>
+    <table class="ut">
+      <thead><tr>
+        <th style="text-align:right;width:18px"></th>
+        <th style="text-align:right;width:34px">Home</th>
+        <th style="text-align:center;width:58px">Kickoff</th>
+        <th style="text-align:left;width:34px">Away</th>
+        <th style="text-align:left;width:18px"></th>
+        <th style="text-align:left">Matchup</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="hr">W4</td><td class="hm">ATX</td><td class="sc">Wed 7:30p</td><td class="aw">DAL</td><td class="ar">W9</td><td class="hl">Texas Derby — bubble implications both sides</td></tr>
+        <tr><td class="hr">E7</td><td class="hm">NE</td><td class="sc">Sat 7:30p</td><td class="aw">ATL</td><td class="ar">E7</td><td class="hl">Level on points — direct East bubble 6-pointer</td></tr>
+        <tr><td class="hr">W5</td><td class="hm">COL</td><td class="sc">Sat 8:30p</td><td class="aw">RSL</td><td class="ar">W6</td><td class="hl">Rocky Mountain Cup — 1 pt apart</td></tr>
+        <tr><td class="hr">E1</td><td class="hm">MIA</td><td class="sc">Sun 6:00p</td><td class="aw">TOR</td><td class="ar">E12</td><td class="hl">Messi vs. TOR — gap could reach double digits</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="up-nl-wrap">
+    <div class="sec-label-nl">Upcoming — Non-League</div>
+    <table class="utnl">
+      <thead><tr>
+        <th style="width:30%">Home</th>
+        <th style="text-align:center;width:26%">Kickoff</th>
+        <th style="width:30%">Away</th>
+        <th>Context</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="tm">SEA</td><td class="sc">Thu 9p</td><td class="tm">Chivas</td><td class="cx">LC Group B · Leg 1</td></tr>
+        <tr><td class="tm">LAG</td><td class="sc">Fri 10p</td><td class="tm">Pachuca</td><td class="cx">CONCACAF CL · SF Leg 1</td></tr>
+        <tr><td class="tm">PHI</td><td class="sc">Sat 5p</td><td class="tm">Hartford</td><td class="cx">US Open Cup · Rd 3</td></tr>
+        <tr><td class="tm">MIA</td><td class="sc">Sun 8p</td><td class="tm">Cruz Azul</td><td class="cx">LC Group A · Leg 2</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<div class="footer">
+  <span>FBref · FotMob · SofaScore · MLSSoccer.com · Updated 6:14 AM ET</span>
+  <span>MLS Water Cooler · 2026</span>
+</div>
+
+</div>
