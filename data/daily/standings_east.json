@@ -109,6 +109,24 @@
   },
   {
     "position": 7,
+    "club": "New York City FC",
+    "club_abbr": "NYC",
+    "conference": "E",
+    "gp": 12,
+    "wins": 4,
+    "draws": 3,
+    "losses": 5,
+    "goals_for": 22,
+    "goals_against": 18,
+    "goal_diff": 4,
+    "points": 15,
+    "ppg": 1.25,
+    "xgd": null,
+    "in_top4": false,
+    "in_bubble": true
+  },
+  {
+    "position": 8,
     "club": "Charlotte FC",
     "club_abbr": "CLT",
     "conference": "E",
@@ -126,7 +144,7 @@
     "in_bubble": true
   },
   {
-    "position": 8,
+    "position": 9,
     "club": "New York Red Bulls",
     "club_abbr": "NYRB",
     "conference": "E",
@@ -144,7 +162,7 @@
     "in_bubble": true
   },
   {
-    "position": 9,
+    "position": 10,
     "club": "Toronto FC",
     "club_abbr": "TOR",
     "conference": "E",
@@ -162,7 +180,7 @@
     "in_bubble": true
   },
   {
-    "position": 10,
+    "position": 11,
     "club": "CF Montréal",
     "club_abbr": "MTL",
     "conference": "E",
@@ -177,24 +195,6 @@
     "ppg": 1.09,
     "xgd": null,
     "in_top4": false,
-    "in_bubble": true
-  },
-  {
-    "position": 11,
-    "club": "New York City FC",
-    "club_abbr": "NYC",
-    "conference": "E",
-    "gp": 11,
-    "wins": 3,
-    "draws": 3,
-    "losses": 5,
-    "goals_for": 19,
-    "goals_against": 18,
-    "goal_diff": 1,
-    "points": 12,
-    "ppg": 1.09,
-    "xgd": null,
-    "in_top4": false,
     "in_bubble": false
   },
   {
@@ -202,15 +202,15 @@
     "club": "Columbus Crew",
     "club_abbr": "CLB",
     "conference": "E",
-    "gp": 11,
+    "gp": 12,
     "wins": 3,
     "draws": 3,
-    "losses": 5,
+    "losses": 6,
     "goals_for": 16,
-    "goals_against": 16,
-    "goal_diff": 0,
+    "goals_against": 19,
+    "goal_diff": -3,
     "points": 12,
-    "ppg": 1.09,
+    "ppg": 1.0,
     "xgd": null,
     "in_top4": false,
     "in_bubble": false
