@@ -1,18 +1,18 @@
 {
-  "last_updated": "2026-05-15T13:02:07.999907+00:00",
-  "last_updated_et": "2026-05-15T09:02:07-04:00",
+  "last_updated": "2026-05-16T12:00:30.074584+00:00",
+  "last_updated_et": "2026-05-16T08:00:30-04:00",
   "season": "2026",
   "stale": true,
   "sources": {
     "fotmob": {
       "status": "ok",
-      "last_success": "2026-05-15T12:55:59.784550+00:00",
+      "last_success": "2026-05-16T11:54:18.987574+00:00",
       "records_fetched": 510,
       "error": null
     },
     "fotmob_standings": {
       "status": "ok",
-      "last_success": "2026-05-15T13:00:19.042621+00:00",
+      "last_success": "2026-05-16T11:58:37.769373+00:00",
       "records_fetched": 30,
       "error": null
     },
@@ -24,13 +24,13 @@
     },
     "fotmob_stats": {
       "status": "ok",
-      "last_success": "2026-05-15T13:00:32.882149+00:00",
+      "last_success": "2026-05-16T11:58:51.371767+00:00",
       "records_fetched": 697,
       "error": null
     },
     "transfermarkt": {
       "status": "ok",
-      "last_success": "2026-05-15T13:01:00.956715+00:00",
+      "last_success": "2026-05-16T11:59:21.041965+00:00",
       "records_fetched": 177,
       "error": null
     },
