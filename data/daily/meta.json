@@ -1,18 +1,18 @@
 {
-  "last_updated": "2026-06-01T16:40:23.276326+00:00",
-  "last_updated_et": "2026-06-01T12:40:23-04:00",
+  "last_updated": "2026-06-02T14:57:41.507927+00:00",
+  "last_updated_et": "2026-06-02T10:57:41-04:00",
   "season": "2026",
   "stale": true,
   "sources": {
     "fotmob": {
       "status": "ok",
-      "last_success": "2026-06-01T16:39:03.062382+00:00",
+      "last_success": "2026-06-02T14:55:50.924955+00:00",
       "records_fetched": 510,
       "error": null
     },
     "fotmob_standings": {
       "status": "ok",
-      "last_success": "2026-06-01T16:39:37.822132+00:00",
+      "last_success": "2026-06-02T14:56:29.935851+00:00",
       "records_fetched": 30,
       "error": null
     },
@@ -24,19 +24,19 @@
     },
     "fotmob_stats": {
       "status": "ok",
-      "last_success": "2026-06-01T16:39:50.968738+00:00",
+      "last_success": "2026-06-02T14:56:44.461574+00:00",
       "records_fetched": 716,
       "error": null
     },
     "transfermarkt": {
       "status": "ok",
-      "last_success": "2026-06-01T16:40:23.098622+00:00",
+      "last_success": "2026-06-02T14:57:41.427726+00:00",
       "records_fetched": 177,
       "error": null
     }
   },
   "module_counts": {
-    "league_scores_ft": 1,
+    "league_scores_ft": 0,
     "league_scores_sch": 0,
     "non_league_scores_ft": 1,
     "non_league_scores_sch": 0,
@@ -45,5 +45,5 @@
     "top_earners": 0,
     "young_players": 0
   },
-  "current_matchday": 15
+  "current_matchday": 0
 }
