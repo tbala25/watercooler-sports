@@ -1,18 +1,18 @@
 {
-  "last_updated": "2026-09-01T15:26:04.306222+00:00",
-  "last_updated_et": "2026-09-01T11:26:04-04:00",
+  "last_updated": "2026-09-02T15:01:37.410771+00:00",
+  "last_updated_et": "2026-09-02T11:01:37-04:00",
   "season": "2026",
   "stale": true,
   "sources": {
     "fotmob": {
       "status": "ok",
-      "last_success": "2026-09-01T15:24:37.391292+00:00",
+      "last_success": "2026-09-02T15:00:20.597886+00:00",
       "records_fetched": 510,
       "error": null
     },
     "fotmob_standings": {
       "status": "ok",
-      "last_success": "2026-09-01T15:25:15.570873+00:00",
+      "last_success": "2026-09-02T15:00:54.952439+00:00",
       "records_fetched": 30,
       "error": null
     },
@@ -24,7 +24,7 @@
     },
     "fotmob_stats": {
       "status": "ok",
-      "last_success": "2026-09-01T15:25:30.563606+00:00",
+      "last_success": "2026-09-02T15:01:07.354310+00:00",
       "records_fetched": 804,
       "error": null
     },
