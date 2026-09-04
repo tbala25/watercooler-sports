@@ -454,7 +454,7 @@
     "competition": "MLS",
     "matchday": 23,
     "match_date": "2026-09-04",
-    "kickoff_utc": "2026-09-04T23:30:00Z",
+    "kickoff_utc": "2026-09-04T23:30:00.000Z",
     "kickoff_et": null,
     "status": "SCH",
     "home_team": "New York City FC",
