@@ -454,7 +454,7 @@
     "competition": "MLS",
     "matchday": 7,
     "match_date": "2026-09-24",
-    "kickoff_utc": "2026-09-24T01:30:00.000Z",
+    "kickoff_utc": "2026-09-24T01:30:00Z",
     "kickoff_et": null,
     "status": "FT",
     "home_team": "Seattle Sounders FC",
