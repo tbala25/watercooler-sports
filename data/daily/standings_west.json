@@ -19,6 +19,24 @@
   },
   {
     "position": 2,
+    "club": "St. Louis City",
+    "club_abbr": "STL",
+    "conference": "W",
+    "gp": 27,
+    "wins": 13,
+    "draws": 8,
+    "losses": 6,
+    "goals_for": 48,
+    "goals_against": 36,
+    "goal_diff": 12,
+    "points": 47,
+    "ppg": 1.74,
+    "xgd": null,
+    "in_top4": true,
+    "in_bubble": false
+  },
+  {
+    "position": 3,
     "club": "FC Dallas",
     "club_abbr": "DAL",
     "conference": "W",
@@ -36,7 +54,7 @@
     "in_bubble": false
   },
   {
-    "position": 3,
+    "position": 4,
     "club": "San Jose Earthquakes",
     "club_abbr": "SJ",
     "conference": "W",
@@ -54,7 +72,7 @@
     "in_bubble": false
   },
   {
-    "position": 4,
+    "position": 5,
     "club": "Houston Dynamo FC",
     "club_abbr": "HOU",
     "conference": "W",
@@ -67,24 +85,6 @@
     "goal_diff": 2,
     "points": 44,
     "ppg": 1.63,
-    "xgd": null,
-    "in_top4": true,
-    "in_bubble": false
-  },
-  {
-    "position": 5,
-    "club": "St. Louis City",
-    "club_abbr": "STL",
-    "conference": "W",
-    "gp": 26,
-    "wins": 12,
-    "draws": 8,
-    "losses": 6,
-    "goals_for": 45,
-    "goals_against": 36,
-    "goal_diff": 9,
-    "points": 44,
-    "ppg": 1.69,
     "xgd": null,
     "in_top4": false,
     "in_bubble": false
