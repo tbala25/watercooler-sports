@@ -1,18 +1,18 @@
 {
-  "last_updated": "2026-10-03T15:07:17.144699+00:00",
-  "last_updated_et": "2026-10-03T11:07:17-04:00",
+  "last_updated": "2026-10-04T15:43:05.006728+00:00",
+  "last_updated_et": "2026-10-04T11:43:05-04:00",
   "season": "2026",
   "stale": true,
   "sources": {
     "fotmob": {
       "status": "ok",
-      "last_success": "2026-10-03T15:05:55.079757+00:00",
+      "last_success": "2026-10-04T15:41:49.066322+00:00",
       "records_fetched": 510,
       "error": null
     },
     "fotmob_standings": {
       "status": "ok",
-      "last_success": "2026-10-03T15:06:30.270289+00:00",
+      "last_success": "2026-10-04T15:42:25.073518+00:00",
       "records_fetched": 30,
       "error": null
     },
@@ -24,7 +24,7 @@
     },
     "fotmob_stats": {
       "status": "ok",
-      "last_success": "2026-10-03T15:06:43.939756+00:00",
+      "last_success": "2026-10-04T15:42:39.153039+00:00",
       "records_fetched": 849,
       "error": null
     },
@@ -36,8 +36,8 @@
     }
   },
   "module_counts": {
-    "league_scores_ft": 16,
-    "league_scores_sch": 54,
+    "league_scores_ft": 12,
+    "league_scores_sch": 61,
     "non_league_scores_ft": 1,
     "non_league_scores_sch": 1,
     "standings_east": 15,
