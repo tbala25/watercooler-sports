@@ -1,18 +1,18 @@
 {
-  "last_updated": "2026-10-17T14:07:42.167952+00:00",
-  "last_updated_et": "2026-10-17T10:07:42-04:00",
+  "last_updated": "2026-10-18T14:22:35.318147+00:00",
+  "last_updated_et": "2026-10-18T10:22:35-04:00",
   "season": "2026",
   "stale": true,
   "sources": {
     "fotmob": {
       "status": "ok",
-      "last_success": "2026-10-17T14:05:42.829650+00:00",
+      "last_success": "2026-10-18T14:20:32.757237+00:00",
       "records_fetched": 510,
       "error": null
     },
     "fotmob_standings": {
       "status": "ok",
-      "last_success": "2026-10-17T14:06:19.231771+00:00",
+      "last_success": "2026-10-18T14:21:07.813871+00:00",
       "records_fetched": 30,
       "error": null
     },
@@ -24,7 +24,7 @@
     },
     "fotmob_stats": {
       "status": "ok",
-      "last_success": "2026-10-17T14:06:33.050219+00:00",
+      "last_success": "2026-10-18T14:21:21.495702+00:00",
       "records_fetched": 861,
       "error": null
     },
@@ -36,8 +36,8 @@
     }
   },
   "module_counts": {
-    "league_scores_ft": 30,
-    "league_scores_sch": 68,
+    "league_scores_ft": 35,
+    "league_scores_sch": 61,
     "non_league_scores_ft": 1,
     "non_league_scores_sch": 3,
     "standings_east": 15,
@@ -45,5 +45,5 @@
     "top_earners": 0,
     "young_players": 0
   },
-  "current_matchday": 29
+  "current_matchday": 30
 }
