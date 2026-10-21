@@ -904,7 +904,7 @@
     "competition": "MLS",
     "matchday": 23,
     "match_date": "2026-10-21",
-    "kickoff_utc": "2026-10-21T23:00:00Z",
+    "kickoff_utc": "2026-10-21T23:00:00.000Z",
     "kickoff_et": null,
     "status": "SCH",
     "home_team": "FC Cincinnati",
