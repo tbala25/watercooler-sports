@@ -454,7 +454,7 @@
     "competition": "MLS",
     "matchday": 31,
     "match_date": "2026-10-26",
-    "kickoff_utc": "2026-10-26T01:00:00.000Z",
+    "kickoff_utc": "2026-10-26T01:00:00Z",
     "kickoff_et": null,
     "status": "FT",
     "home_team": "LAFC",
