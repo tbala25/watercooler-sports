@@ -274,7 +274,7 @@
     "competition": "MLS",
     "matchday": null,
     "match_date": "2026-11-25",
-    "kickoff_utc": "2026-11-25T03:00:00.000Z",
+    "kickoff_utc": "2026-11-25T03:00:00Z",
     "kickoff_et": null,
     "status": "FT",
     "home_team": "San Jose Earthquakes",
